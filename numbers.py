@@ -1,3 +1,4 @@
+import locale
 def run():
   tabla = int(input(
 """
@@ -9,10 +10,17 @@ Que tabla quiere consultar? """))
       print (str(tabla) +" x " + str(i) + " = " + str(tabla * i))
       i += 1
 
-
-for i in range(-1,51,2):
-    if i > 0:
-        print(f"numero impar {i}")
+i = round(float(input(
+    """
+Bienvenido al programa consulta de numeros pares e impares...
+por favor digite el numero a consultar... 
+""")))
+# for i in range(1, 50):
+if (i % 2 != 0):
+    print(f"El numero {i} es numero impar")
+else:
+    print(f"El numero {i} es numero par")
+            
       
      
 
