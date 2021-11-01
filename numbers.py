@@ -9,6 +9,13 @@ Que tabla quiere consultar? """))
       print (str(tabla) +" x " + str(i) + " = " + str(tabla * i))
       i += 1
 
+
+for i in range(-1,51,2):
+    if i > 0:
+        print(f"numero impar {i}")
+      
+     
+
 if __name__ == "__main__":
     run()  
 
