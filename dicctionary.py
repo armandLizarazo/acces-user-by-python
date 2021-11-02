@@ -4,10 +4,10 @@ crg003 = {'Referencia': 'nsuv8', 'Producto': 'Cargador ', 'Marca': 'Naisu ', 'Ti
 consulta = {input('Digite el codigo a consultar...')}
 if (consulta == crg001):
   for i in crg001.values():
-    print(i)
+    print(f'{crg001}')
 else:
   for i in crg002.values():
-    print(i)
+    print(f"{crg002}")
 
 
 
