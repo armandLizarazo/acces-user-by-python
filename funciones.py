@@ -21,7 +21,7 @@ print (identificacion)
 if (identificacion == usuario1):
   print (identificacion.capitalize())
 else:
-  print('Wtf yw?...')
+  print('Wtf dyw?...')
 
 usuario = input('digita tu nombre ')
 usuario = usuario.capitalize()
@@ -40,7 +40,7 @@ print(edad)
 
 if (edad == 0):
   bienvenida = "'...i'm SORRY..."
-  despedida = "  Registrate con el Administrador 304 631 3114  "
+  despedida = "  Ponte en contacto con el Administrador 304 631 3114  "
 elif (edad < 18):
   bienvenida = "Lo sentimos..."
   despedida = "  anda... a Crecer!  "
