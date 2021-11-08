@@ -1,10 +1,10 @@
 
 
-usuario1 = ['Armando', 'Lizarazo', 43, 1.68]
-usuario2 = ['Luis', 'Ramirez', 21, 1.69]
-usuario3 = ['Diego', 'Linares', 15, 1.65]
-usuario4 = ['Marcela', 'Castro', 18, 1.62]
-usuario5 = []
+usuario_1 = ['Armando', 'Lizarazo', 43, 1.68]
+usuario_2 = ['Luis', 'Ramirez', 21, 1.69]
+usuario_3 = ['Diego', 'Linares', 15, 1.65]
+usuario_4 = ['Marcela', 'Castro', 18, 1.62]
+usuario_5 = []
 bienvenida = '  Felicidades!!  '
 despedida = '   Estas dentro  '
 nombre = 0
@@ -23,7 +23,7 @@ identificacion = input('Ingresa tu codigo de usuario...')
 
 print (identificacion)
 
-if (identificacion == usuario1):
+if (identificacion == usuario_1):
   print (identificacion.capitalize())
 else:
   print('Wtf dyw?...')
@@ -32,14 +32,14 @@ usuario = input('digita tu nombre ')
 usuario = usuario.capitalize()
 
 
-if (usuario == usuario1[0]):
-  edad = usuario1[2]
-elif (usuario == usuario2[0]):
-  edad = usuario2[2]
-elif (usuario == usuario3[0]):
-  edad = usuario3[2]
-elif (usuario == usuario4[0]):
-  edad = usuario4[2]
+if (usuario == usuario_1[0]):
+  edad = usuario_1[2]
+elif (usuario == usuario_2[0]):
+  edad = usuario_2[2]
+elif (usuario == usuario_3[0]):
+  edad = usuario_3[2]
+elif (usuario == usuario_4[0]):
+  edad = usuario_4[2]
  
 print(edad)
 
@@ -50,11 +50,11 @@ elif (edad < 18):
   bienvenida = "Lo sentimos..."
   despedida = "  anda... a Crecer!  "
 
-answer1 = 0
+answer_1 = 0
 
 
 
-
+contacto = 0
 
 def autorized ():
   if edad >= 18:   
@@ -66,9 +66,13 @@ def autorized ():
     2-No
     """))
     if (respuesta == 1):
-      print("Dejanos tu numero y nos pondremos en contacto")
-      input()
+      print("Dejanos tu informacion")
+      nombre = input("Nombre: ")
+      apellido = input("apellido: ")
+      nacimiento = input("año de nacimiento: ")
+      estatura = input("estatura: ")
       print('Hasta Luego')
+      print (f"Tu nombre es {nombre} {apellido}, naciste en {nacimiento}, mides {estatura} es correcto?" )
     elif(respuesta == 2):
       print('Hasta luego...')
   else:
