@@ -1,5 +1,3 @@
-
-
 usuario_1 = ['Armando', 'Lizarazo', 43, 1.68]
 usuario_2 = ['Luis', 'Ramirez', 21, 1.69]
 usuario_3 = ['Diego', 'Linares', 15, 1.65]
@@ -48,14 +46,33 @@ if (edad == 0):
   despedida = "  Ponte en contacto con el Administrador 304 631 3114  "
 elif (edad < 18):
   bienvenida = "Lo sentimos..."
-  despedida = "  anda... a Crecer!  "
-
-answer_1 = 0
+  despedida = "  bye!  "
 
 
 
-contacto = 0
+def registro():  
+  print("Dejanos tu informacion")
+  nombre = input("nombre: ")
+  apellido = input("apellido: ")
+  nacimiento = input("año de nacimiento: ")
+  estatura = input("estatura: ")
+  celular = input("Numero de contacto")
+  celular = celular
+  print (f"Tu nombre es {nombre} {apellido}, naciste en {nacimiento} y mides {estatura} es correcto?" )
+  opcion = input(("""
+      y-Si
+      n-No
+      """))
+  opcion = opcion
+  y = "y"
+  n = "n"
+  if opcion == y:
+   print("Pronto recibiras un mensaje de texto con tu usuario o...")
+  elif opcion == n:
+        print("Intenta nuevamente...")
+        registro() 
 
+      
 def autorized ():
   if edad >= 18:   
     print (f'{usuario}, tienes {edad} años, bienvenid@.')
@@ -66,13 +83,7 @@ def autorized ():
     2-No
     """))
     if (respuesta == 1):
-      print("Dejanos tu informacion")
-      nombre = input("Nombre: ")
-      apellido = input("apellido: ")
-      nacimiento = input("año de nacimiento: ")
-      estatura = input("estatura: ")
-      print('Hasta Luego')
-      print (f"Tu nombre es {nombre} {apellido}, naciste en {nacimiento}, mides {estatura} es correcto?" )
+      registro() 
     elif(respuesta == 2):
       print('Hasta luego...')
   else:
