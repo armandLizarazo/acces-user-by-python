@@ -52,25 +52,46 @@ elif (edad < 18):
 
 def registro():  
   print("Dejanos tu informacion")
-  nombre = input("nombre: ")
-  apellido = input("apellido: ")
-  nacimiento = input("año de nacimiento: ")
+  nombre = input("nombre: ").capitalize()
+  apellido = input("apellido: ").capitalize()
+  nacimiento = int(input("año de nacimiento: "))
+  edad = 2021 - nacimiento 
   estatura = input("estatura: ")
-  celular = input("Numero de contacto")
-  celular = celular
-  print (f"Tu nombre es {nombre} {apellido}, naciste en {nacimiento} y mides {estatura} es correcto?" )
-  opcion = input(("""
+  celular = input("Numero de contacto ")
+  validacion = len(celular)
+  if validacion != 10:
+    print("Numero de celular no valido")
+    celular = input("Numero de contacto: ")
+    validacion = len(celular)
+    if validacion != 10:
+      print("Numero de celular no valido")
+      print(f"error: {validacion} deseas intentarlo nuevamente?")
+      opcion = input(("""
       y-Si
       n-No
-      """))
-  opcion = opcion
-  y = "y"
-  n = "n"
-  if opcion == y:
-   print("Pronto recibiras un mensaje de texto con tu usuario o...")
-  elif opcion == n:
-        print("Intenta nuevamente...")
-        registro() 
+          """))
+      opcion = opcion
+      y = "y"
+      n = "n"
+      if opcion == y:
+        registro()
+      else:
+        print(bienvenida)
+  else:
+    # celular = celular
+    print (f"Tu nombre es {nombre} {apellido}, tienes {edad} años y mides {estatura} es correcto?" )
+    opcion = input(("""
+    y-Si
+    n-No
+        """))
+    opcion = opcion
+    y = "y"
+    n = "n"
+    if opcion == y:
+      print(f"{nombre} pronto recibiras un mensaje de texto con tu usuario o...")
+    elif opcion == n:
+      print("Intenta nuevamente...")
+      registro() 
 
       
 def autorized ():
